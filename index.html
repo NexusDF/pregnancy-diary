@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <link rel="apple-touch-icon" href="%BASE_URL%apple-touch-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#FBF4F1" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#3A2C2E" media="(prefers-color-scheme: dark)" />
+    <meta name="description" content="Дневник веса и обхвата талии по неделям беременности" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Дневник" />
+    <title>Дневник беременности</title>
+    <script>
+      ;(function () {
+        var media = window.matchMedia("(prefers-color-scheme: dark)")
+        function apply() {
+          document.documentElement.classList.toggle("dark", media.matches)
+        }
+        apply()
+        media.addEventListener("change", apply)
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
